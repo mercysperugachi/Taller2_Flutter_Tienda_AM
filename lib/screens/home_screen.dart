@@ -93,12 +93,12 @@ Widget _buildContenidoPrincipal() {
           return Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Sidebar con ancho fijo de 250px [cite: 123]
+              // Sidebar con ancho fijo de 250px 
               SizedBox(
                 width: 250,
                 child: _buildSidebar(),
               ),
-              // Contenido principal [cite: 124]
+              // Contenido principal 
               Expanded(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(16),
@@ -107,8 +107,8 @@ Widget _buildContenidoPrincipal() {
               ),
             ],
           );
-        } else { // [cite: 127]
-          // Móvil/Tablet: Se mantiene el layout original de Column [cite: 128]
+        } else { // 
+          // Móvil/Tablet: Se mantiene el layout original de Column]
           return SingleChildScrollView(
             padding: const EdgeInsets.all(16),
             child: _buildEstructuraCentral(mostrarCategoriasHorizontales: true), // [cite: 129]

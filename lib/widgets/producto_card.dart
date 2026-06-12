@@ -22,7 +22,6 @@ class ProductoCard extends StatelessWidget {
         );
       },
       child: Container(
-        // Recuperamos la decoración original para que la tarjeta no sea invisible
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),

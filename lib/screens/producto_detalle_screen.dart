@@ -44,21 +44,35 @@ class ProductoDetalleScreen extends StatelessWidget {
                     ),
                     // Badge de descuento (esquina superior izquierda)
                     Positioned(
-                      top: 70,
+                      top: 70, // Lo bajamos a 70 para que no choque con la flecha de volver atrás (que está en 16)
                       left: 16,
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                         decoration: BoxDecoration(
-                          color: Colors.red[900], // Identidad rojo vino
-                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.red[900], // Usamos el rojo vino para mantener el estilo
+                          borderRadius: BorderRadius.circular(20), // Bordes bien redondeados
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.2),
+                              blurRadius: 4,
+                              offset: const Offset(0, 2),
+                            ),
+                          ],
                         ),
-                        child: const Text(
-                          'NUEVO',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                          ),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min, // Para que el Row ocupe solo el espacio necesario
+                          children: [
+                            Icon(Icons.local_offer, color: Colors.white, size: 14),
+                            SizedBox(width: 4),
+                            Text(
+                              '-20% OFF',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
